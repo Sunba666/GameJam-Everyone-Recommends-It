@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!1 &8793247954167633177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 7
+  m_Component:
+  - component: {fileID: 7097536938925511242}
+  - component: {fileID: 2107660132950607962}
+  - component: {fileID: 4973717212484364187}
+  m_Layer: 0
+  m_HasEditorInfo: 1
+  m_Name: FrontendServices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7097536938925511242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793247954167633177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2107660132950607962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793247954167633177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325e7ec637a536047b0b30db83290581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 8a01de781ac3dba49984f90e93bb1314, type: 3}
+  cursorHotspot: {x: 10, y: 5}
+  musicClip: {fileID: 8300000, guid: 62d99b909b05c4541802a016c5c6f9b5, type: 3}
+  clickClip: {fileID: 8300000, guid: e64a64d7f3d39144bb81e163edd7bdfe, type: 3}
+  transition: {fileID: 4973717212484364187}
+  settings:
+    master: 0.8
+    music: 0.65
+    sfx: 0.8
+    fullscreen: 0
+    motion: 1
+--- !u!114 &4973717212484364187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793247954167633177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29450038cf7a6b54db61d96aa27e037e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 21300000, guid: d306423d16346fa4bb30a934c349657f, type: 3}
+  - {fileID: 21300000, guid: 8eff0d53199b5f540a81fd8a1a181c37, type: 3}
+  - {fileID: 21300000, guid: 7fce374816285ea49947826efaa06e4a, type: 3}
+  - {fileID: 21300000, guid: f1d11465a8cf3cb4ea8a0406d56367f5, type: 3}
+  - {fileID: 21300000, guid: 8c8dc8b2568dbcb42a604d61a0f656a8, type: 3}
+  exitSeconds: 1.5
+  enterSeconds: 1.2
+  paperColor: {r: 0.984, g: 0.945, b: 0.863, a: 1}

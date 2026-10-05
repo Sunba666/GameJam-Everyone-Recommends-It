@@ -1,0 +1,22 @@
+Tool: built-in image_gen
+Reference: 大家都推荐_贴纸社会_概念图_v1.png
+Purpose: static concept edit showing NPC social interaction and expressive faces; no Unity animation implemented.
+
+Use case: precise-object-edit.
+Edit the supplied original gameplay concept image for the Chinese 2D game “大家都推荐”.
+User request: During recommendation propagation, NPCs should interact more with one another and their emoji-like facial expressions should change. Add this social interaction to the existing preferred first-version art direction.
+
+STRICT PRESERVATION: Keep the same landscape aspect ratio, warm cream paper, hand-drawn black contours, tactile sticker style, exact title, subtitle, top category counters 6/1/1/1/1, target cat, round 7/12, all five bottom content choice cards, bottom helper and restart button. Preserve EXACTLY TEN NPCs in their original three rows (3,4,3) and their positions, existing neighbor relationships, category badges and category assignments. Keep all original text legible. Do not redesign the UI or overall style. This is the same game screen with refined CHARACTER INTERACTION, not a new illustration or flow chart.
+
+Requested changes within the central NPC playfield:
+- The NPC faces themselves are expressive emoji-style faces, drawn in the existing black-ink style on their cream circular bodies; NOT additional floating yellow emoji characters, NOT phones, no photorealistic emojis.
+- The primary interaction chain stays the same: top-left cat fan -> middle-row second cat fan -> bottom-row middle cat fan.
+- Top-left cat fan subtly leans toward the middle-row recipient, looks directly at them, wears an enthusiastic “you need to see this” open smile, and extends one tiny simple ink-line hand with a small coral cat content slip along the EXISTING arrow. A small cream paper speech bubble close to this sender says exactly “这个！”.
+- Middle-row second NPC faces up-left toward that sender with a surprised emoji expression: raised brows, widened dot eyes and small open mouth. One tiny hand reaches toward the incoming content. A second tiny outgoing gesture points toward the lower-center neighbor, giving a readable passing-on social action. Small cream bubble close to this NPC says exactly “诶？”.
+- Bottom-center cat fan glances up-left toward the middle-row sender with an interested, newly convinced emoji smile (raised eyebrow, attentive eyes), one small simple hand acknowledging them. Keep the existing “我自己喜欢的” bubble placed neatly in its open space, keep a restrained coral response ring.
+- Middle-row third NPC (game preference) looks sideways at this interaction with a thinking emoji expression, one eyebrow raised and a tiny simple hand at the chin. They KEEP the game badge. No speech bubble here.
+- Bottom-right NPC (music preference) gives the spread a mild unimpressed / skeptical emoji reaction with half-lidded eyes and flat mouth, KEEPING the music badge. No speech bubble.
+- Other five NPCs remain calm and varied, not all smiling or cheering and no additional activity. These reaction differences must show that seeing recommendations does not always mean agreeing.
+- Existing primary coral arrows still read first; social gestures support them. Use at most a few tiny curved motion ticks to suggest turning heads and passing content. No confetti explosion, no extra glow, no full-screen effects.
+- Avoid overlap between hands, labels, bubbles, neighbor lines, faces, and UI. Preserve readable whitespace. Tiny new hands are just two or three ink strokes, not complex anatomy. No extra people or faces on the content slips.
+The new emotional focus is “people notice and react to EACH OTHER as recommendations travel,” not ten isolated icons changing color. Static screenshot that clearly suggests a short social animation. Keep changes tightly restricted to facial expressions, slight tilts, tiny interaction gestures, and the two small new bubbles. All other screen regions remain consistent with the input.

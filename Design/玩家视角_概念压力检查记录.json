@@ -1,0 +1,599 @@
+{
+  "date": "2026-10-02",
+  "purpose": "独立概念压力检查；不是Unity测试或完整玩法验证",
+  "categoryMapping": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "targetIndex": 3,
+  "random": {
+    "initialSeed": 342103,
+    "countPerVariant": 4000,
+    "formula": "seed=(Math.imul(seed,1664525)+1013904223)>>>0; action=Math.floor(seed/4294967296*4)",
+    "actions": "0/1/2选择对应候选，3刷新"
+  },
+  "variantA": {
+    "model": "\nconst EDGES=[[0,1],[1,2],[2,3],[3,4],[4,0],[0,2],[1,3],[2,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,5],[5,7],[6,8],[7,9]];\nconst NEI=Array.from({length:10},()=>[]);\nEDGES.forEach(([a,b])=>{NEI[a].push(b);NEI[b].push(a);});\nconst initial=[0,0,1,2,0,0,2,1,3,4];\nfunction init(){return {round:0,fav:initial.slice(),v:initial.map(f=>Array.from({length:5},(_,c)=>c===f?4:1)),personal:[1,1,1,1,1],queue:Array.from({length:10},()=>[0,0,0,0,0]),fired:Array.from({length:10},()=>[false,false,false,false,false]),countHistory:[],history:[],offered:[]};}\nfunction counts(s){let c=[0,0,0,0,0];s.fav.forEach(i=>c[i]++);return c;}\nfunction offers(s){const cnt=counts(s),rank=Array.from({length:5},(_,c)=>c).sort((a,b)=>(s.personal[b]+0.9*cnt[b])-(s.personal[a]+0.9*cnt[a])||a-b);\nconst recipe=[rank[0],rank[1],s.round%5];\nreturn recipe.map((c,j)=>({c,to:[(s.round*2+j*3)%10,(s.round*2+j*3+1)%10]}));}\nfunction step(s,a,p={decay:0.85,click:3,neighbor:0.7,auto:0.8,burst:1.5,margin:0.5}){const x=structuredClone(s),o=offers(s),ct=counts(s);let newv=s.v.map(v=>v.map(n=>n*p.decay));const lead=ct.indexOf(Math.max(...ct));\nfor(let i=0;i<10;i++){for(let c=0;c<5;c++){newv[i][c]+=p.neighbor*NEI[i].filter(n=>s.fav[n]===c).length+s.queue[i][c];} if(i===(s.round*3)%10||i===(s.round*3+1)%10)newv[i][lead]+=p.auto;}\nx.personal=x.personal.map(n=>n*0.7);\nif(a<3){const card=o[a];card.to.forEach(i=>newv[i][card.c]+=p.click);x.personal[card.c]+=2;}else{x.personal=x.personal.map(n=>n*0.25);}\nx.v=newv;x.fav=newv.map((v,i)=>{const best=v.indexOf(Math.max(...v));return v[best]>=v[s.fav[i]]+p.margin?best:s.fav[i];});x.queue=Array.from({length:10},()=>[0,0,0,0,0]);\nfor(let i=0;i<10;i++)for(let c=0;c<5;c++)if(!x.fired[i][c]&&NEI[i].filter(n=>x.fav[n]===c).length>=3){x.queue[i][c]+=p.burst;x.fired[i][c]=true;}\nx.round++;x.countHistory.push(counts(x));x.history.push(a);x.offered.push(o);\nreturn x;\n}\nfunction win(s,type,target=3){const c=counts(s);if(type==='lead')return c[target]>=4&&c.every((x,i)=>i===target||c[target]>x);return s.countHistory.slice(-3).length===3&&s.countHistory.slice(-3).every(c=>Math.max(...c)<=4&&c.filter(n=>n>=2).length>=3);}\n",
+    "results": {
+      "fixed": [
+        {
+          "name": "一直第一张",
+          "final": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "只点热门",
+          "final": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "只点游戏",
+          "final": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "永远换一批",
+          "final": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "name": "追逐最冷",
+          "final": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            1,
+            0,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "random": {
+        "runs": 4000,
+        "leadWins": 0,
+        "diverseWins": 0,
+        "bestLead": [],
+        "diverseExample": null
+      }
+    }
+  },
+  "variantB": {
+    "model": "\nconst EDGES=[[0,1],[1,2],[2,3],[3,4],[4,0],[0,2],[1,3],[2,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,5],[5,7],[6,8],[7,9]];\nconst NEI=Array.from({length:10},()=>[]);\nEDGES.forEach(([a,b])=>{NEI[a].push(b);NEI[b].push(a);});\nconst initial=[0,0,1,2,0,0,2,1,3,4];\nfunction init(){return {round:0,fav:initial.slice(),v:initial.map(f=>Array.from({length:5},(_,c)=>c===f?4:1)),personal:[1,1,1,1,1],queue:Array.from({length:10},()=>[0,0,0,0,0]),fired:Array.from({length:10},()=>[false,false,false,false,false]),countHistory:[],history:[],offered:[]};}\nfunction counts(s){let c=[0,0,0,0,0];s.fav.forEach(i=>c[i]++);return c;}\nfunction offers(s){const cnt=counts(s),rank=Array.from({length:5},(_,c)=>c).sort((a,b)=>(s.personal[b]+0.9*cnt[b])-(s.personal[a]+0.9*cnt[a])||a-b);\nconst recipe=[rank[0],rank[1],s.round%5];\nreturn recipe.map((c,j)=>({c,to:[(s.round*2+j*3)%10,(s.round*2+j*3+1)%10]}));}\nfunction step(s,a,p={decay:0.75,click:3,neighbor:0.8,auto:0.3,burst:1.2,margin:0.3}){const x=structuredClone(s),o=offers(s),ct=counts(s);let newv=s.v.map(v=>v.map(n=>n*p.decay));const lead=ct.indexOf(Math.max(...ct));\nfor(let i=0;i<10;i++){for(let c=0;c<5;c++){newv[i][c]+=p.neighbor*NEI[i].filter(n=>s.fav[n]===c).length/NEI[i].length+s.queue[i][c];} if(i===(s.round*3)%10||i===(s.round*3+1)%10)newv[i][lead]+=p.auto;}\nx.personal=x.personal.map(n=>n*0.7);\nif(a<3){const card=o[a];card.to.forEach(i=>newv[i][card.c]+=p.click);x.personal[card.c]+=2;}else{x.personal=x.personal.map(n=>n*0.25);}\nx.v=newv;x.fav=newv.map((v,i)=>{const best=v.indexOf(Math.max(...v));return v[best]>=v[s.fav[i]]+p.margin?best:s.fav[i];});x.queue=Array.from({length:10},()=>[0,0,0,0,0]);\nfor(let i=0;i<10;i++)for(let c=0;c<5;c++)if(!x.fired[i][c]&&NEI[i].filter(n=>x.fav[n]===c).length>=3){x.queue[i][c]+=p.burst;x.fired[i][c]=true;}\nx.round++;x.countHistory.push(counts(x));x.history.push(a);x.offered.push(o);\nreturn x;\n}\nfunction win(s,type,target=3){const c=counts(s);if(type==='lead')return c[target]>=4&&c.every((x,i)=>i===target||c[target]>x);return s.countHistory.slice(-3).length===3&&s.countHistory.slice(-3).every(c=>Math.max(...c)<=4&&c.filter(n=>n>=2).length>=3);}\n",
+    "results": {
+      "fixed": [
+        {
+          "name": "只点热门",
+          "counts": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "只点游戏",
+          "counts": [
+            0,
+            0,
+            0,
+            10,
+            0
+          ],
+          "lead": true,
+          "diverse": false,
+          "history": [
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "永远换一批",
+          "counts": [
+            10,
+            0,
+            0,
+            0,
+            0
+          ],
+          "lead": false,
+          "diverse": false,
+          "history": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "name": "追逐最冷",
+          "counts": [
+            3,
+            2,
+            0,
+            3,
+            2
+          ],
+          "lead": false,
+          "diverse": true,
+          "history": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "history": [
+            1,
+            3,
+            2,
+            2,
+            1,
+            3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "counts": [
+            [
+              3,
+              4,
+              1,
+              1,
+              1
+            ],
+            [
+              3,
+              4,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              4,
+              3,
+              1,
+              1
+            ],
+            [
+              1,
+              3,
+              3,
+              2,
+              1
+            ],
+            [
+              0,
+              5,
+              2,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              5,
+              1,
+              4,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              6,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              6,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              6,
+              0
+            ]
+          ],
+          "a": true,
+          "b": false
+        },
+        {
+          "history": [
+            3,
+            1,
+            2,
+            2,
+            0,
+            3,
+            3,
+            2,
+            2,
+            2,
+            1,
+            2
+          ],
+          "counts": [
+            [
+              4,
+              2,
+              2,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              1,
+              1,
+              1
+            ],
+            [
+              4,
+              3,
+              0,
+              2,
+              1
+            ],
+            [
+              5,
+              3,
+              0,
+              2,
+              0
+            ],
+            [
+              5,
+              3,
+              0,
+              2,
+              0
+            ],
+            [
+              5,
+              3,
+              0,
+              2,
+              0
+            ],
+            [
+              3,
+              3,
+              2,
+              2,
+              0
+            ],
+            [
+              1,
+              3,
+              2,
+              4,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              4,
+              2
+            ],
+            [
+              0,
+              2,
+              2,
+              3,
+              3
+            ],
+            [
+              0,
+              3,
+              2,
+              2,
+              3
+            ]
+          ],
+          "a": false,
+          "b": true
+        },
+        {
+          "history": [
+            0,
+            0,
+            1,
+            3,
+            2,
+            3,
+            2,
+            3,
+            1,
+            2,
+            1,
+            2
+          ],
+          "counts": [
+            [
+              4,
+              2,
+              2,
+              1,
+              1
+            ],
+            [
+              6,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              6,
+              2,
+              1,
+              0,
+              1
+            ],
+            [
+              6,
+              2,
+              1,
+              0,
+              1
+            ],
+            [
+              5,
+              4,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              4,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              4,
+              0,
+              0,
+              1
+            ],
+            [
+              5,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              4,
+              0,
+              0,
+              2
+            ],
+            [
+              4,
+              4,
+              0,
+              0,
+              2
+            ],
+            [
+              4,
+              4,
+              0,
+              0,
+              2
+            ]
+          ],
+          "a": false,
+          "b": true
+        }
+      ],
+      "randomWins": [
+        7,
+        16
+      ],
+      "maxGame": 7
+    }
+  },
+  "limitations": [
+    "只检查一个固定开局",
+    "有限搜索未找到解不代表无解",
+    "目标推广额外要求至少4人，与方案独占第一不同",
+    "候选与换一批使用试验简化规则，与建议稿不同",
+    "模型未验证人类理解或趣味性"
+  ]
+}

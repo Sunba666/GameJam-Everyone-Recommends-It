@@ -1,0 +1,52 @@
+# Unity generated files and local editor settings
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+*.log
+*.tmp
+
+# IDE-generated project files
+/.vs/
+/.idea/
+/.vscode/
+/.vsconfig
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# Local backups and exported packages
+/Design/Menu*Backup_*/
+/Assets/Scenes/Backups/
+/Assets/Scenes/Backups.meta
+*.unitypackage
+*.apk
+*.aab
+*.app
+*.exe
+
+# Local credentials and signing files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.keystore
+*.jks
+.DS_Store
+Thumbs.db

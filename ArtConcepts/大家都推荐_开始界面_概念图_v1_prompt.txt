@@ -1,0 +1,25 @@
+Tool: built-in image_gen
+Style reference: 大家都推荐_互动表情_概念图_v3.png
+Purpose: new start-menu concept; flattened image, not separated UI assets or implemented Unity menu.
+
+Use case: ui-mockup / stylized-concept.
+Create one finished 16:9 landscape START MENU concept image for the original Chinese indie Unity2D game “大家都推荐”. Use the provided image strictly as the visual style and character reference. This is a NEW start-screen composition, not a gameplay HUD. Match its warm cream paper, slightly irregular thick black hand-drawn contours, subtle paper grain, flat cut-paper sticker illustrations with small offset paper shadows, soft coral / mustard / periwinkle / teal / mauve content accents, expressive circular cream NPCs with simple black emoji-like faces and tiny hands and feet. Cohesive, inviting, tactile, polished but achievable for a solo 21-day game. Keep the existing reference gameplay image unchanged; produce a separate screen.
+
+ART DIRECTION AND HIERARCHY:
+A striking large original Chinese hand-lettered logo “大家都推荐” dominates the upper-middle center, borrowing the reference logo's bold lively black ink lettering on an irregular cream sticker silhouette. Add just two or three coral radiating ink marks at the upper right of the logo. Broad calm negative space surrounds title and buttons. Beneath the logo, centered smaller clear black text exactly “你只是点了自己想看的”.
+One unmistakable primary CTA below the subtitle, centered in the lower-middle: a large warm coral paper rectangle with gently irregular ink outline, restrained offset paper shadow, bold Chinese text exactly “开始推荐”, with a small hand-drawn right arrow. A small black mouse pointer rests near the button's right edge; subtle pressed/hovered treatment. Beneath it, two much smaller low-emphasis cream outlined paper buttons side by side reading “怎么玩” and “设置”. Clear distinction between the main action and secondary options. At the very bottom, small centered text exactly “让你喜欢的内容登顶。” Leave safe margins and no overlap.
+
+CHARACTER VIGNETTES:
+Exactly TEN small NPC sticker characters, the SAME circular cream body design as reference, arranged as five little interacting pairs around the outer edges of the composition. They frame the menu, do not replace or obscure the title and buttons. Each NPC appears once. Preserve human-social recommendation feeling with emoji-style facial expressions and tiny gestures.
+- Two at upper left exchanging a coral cat content card: one excitedly recommending, one surprised and curious.
+- Two at upper right sharing a mauve music card: one relaxed and nodding, the other listening with closed eyes.
+- Two at lower left reacting to a mustard food card: one interested, the other mildly skeptical with a raised eyebrow.
+- Two at lower right looking at a slate/periwinkle game card: one gesturing eagerly, the other thinking with hand at chin.
+- Two small characters near the bottom edges, balanced around rather than blocking the bottom text, one with a teal newspaper badge and the other considering the shared news.
+Faces contain simple black eyes, brows and mouths; no separate yellow emoji heads. Content badges are small. Gestures are economical, not detailed limbs. Each pair has at most one short curved hand-drawn arrow or dotted trail suggesting sharing; trails stay on the periphery and never run behind menu text. No full NPC connection web. Very few floating content slips. The characters feel animated through poses but are not all laughing.
+Only ONE small optional paper dialogue bubble by the top-left sharing pair, text exactly “你也看看！”. No other dialogue needed.
+
+Main center must stay extremely readable. Show the theme of ideas traveling socially using small recurring content marks, not lots of decoration. Paper texture is gentle and does not dirty the typography. Full-bleed flat UI artwork, no photographed desk, no device mockup, no 3D camera angle.
+
+REMOVE ALL GAMEPLAY HUD FROM THE REFERENCE: no round counter, no popularity totals, no target selection, no bottom five-choice toolbar, no restart button, no replay panel, no diagrams explaining mechanics. No progress save or continue button, no shop, no currency, no extra modes.
+All visible strings must be Chinese as specified; no English title, no watermark, no technical labels, no concept-art annotations. Crisp highly legible Chinese typography. Deliver one visually complete title/menu screen with a clear title -> invitation -> primary start button reading order.
