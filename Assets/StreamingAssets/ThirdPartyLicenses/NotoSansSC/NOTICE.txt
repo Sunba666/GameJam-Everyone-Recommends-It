@@ -1,0 +1,6 @@
+Noto Sans SC Regular
+Version 2.004
+Copyright 2014-2021 Adobe (http://www.adobe.com/).
+Licensed under SIL Open Font License 1.1; see OFL.txt.
+Official source: https://github.com/notofonts/noto-cjk
+The font binary is unmodified. This license applies to the font, not the game.

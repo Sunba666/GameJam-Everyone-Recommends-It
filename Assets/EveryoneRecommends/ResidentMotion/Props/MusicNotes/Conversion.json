@@ -1,0 +1,26 @@
+{
+  "id": "MusicNotes",
+  "source": "E:\\《大家都推荐》-GameJam\\音符组合 A 上浮动效.mp4",
+  "source_sha256": "3e57e0465c4bfe1789371b1c1cbb8a2a422ff972dd58b6b6708473d969487720",
+  "source_unchanged": true,
+  "canvas": [
+    512,
+    512
+  ],
+  "frames": 121,
+  "fps": 24.0,
+  "seconds": 5.041666666666667,
+  "source_union": [
+    39,
+    0,
+    680,
+    720
+  ],
+  "fixed_scale": 0.6888888888888889,
+  "offset": [
+    8,
+    8
+  ],
+  "all_frames_have_transparent_border": true,
+  "preserves_source_offscreen_motion": true
+}

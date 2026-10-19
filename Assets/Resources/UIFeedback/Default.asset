@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529224dd420972f48a345848b92c9553, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  hoverScale: 1.055
+  pressedScale: 0.94
+  buttonResponse: 0.1
+  reactionSeconds: 4.5
+  reactionEnter: 0.14
+  reactionExit: 0.25
+  floorFadeOut: 0.22
+  floorFadeIn: 0.22
+  floorEntryScale: 1.05
+  cameraResponse: 8
+  cardSize: {x: 300, y: 400}
+  cardFontSize: 17
+  placementStep: 20
+  selectionColor: {r: 1, g: 0.82, b: 0.7, a: 1}

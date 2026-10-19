@@ -50,6 +50,13 @@ MonoBehaviour:
   cursorHotspot: {x: 10, y: 5}
   musicClip: {fileID: 8300000, guid: 62d99b909b05c4541802a016c5c6f9b5, type: 3}
   clickClip: {fileID: 8300000, guid: e64a64d7f3d39144bb81e163edd7bdfe, type: 3}
+  residentsMusic: {fileID: 8300000, guid: 68b992b0da14d654db828f8990de0391, type: 3}
+  recommendationSounds:
+  - {fileID: 8300000, guid: ad39a0efc18435844ba5678add79c261, type: 3}
+  - {fileID: 8300000, guid: c2388628f175bb04db5d10a6905d70ab, type: 3}
+  - {fileID: 8300000, guid: 6db95d43413d24646a915b3f41039c24, type: 3}
+  - {fileID: 8300000, guid: d2a5b03723961fd4d9e6c4592e4ae082, type: 3}
+  - {fileID: 8300000, guid: a894e4a0b7d48e84c9017651320c56e4, type: 3}
   transition: {fileID: 4973717212484364187}
   settings:
     master: 0.8

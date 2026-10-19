@@ -1,0 +1,26 @@
+{
+  "id": "CatSitting",
+  "source": "E:\\《大家都推荐》-GameJam\\坐姿可拥抱待机.mp4",
+  "source_sha256": "322a4a5e778e315499f04c66bc083e2a55b8c79960fe623309b9793dfdde8b17",
+  "source_unchanged": true,
+  "canvas": [
+    512,
+    512
+  ],
+  "frames": 121,
+  "fps": 24.0,
+  "seconds": 5.041666666666667,
+  "source_union": [
+    42,
+    58,
+    683,
+    662
+  ],
+  "fixed_scale": 0.7613104524180967,
+  "offset": [
+    -19.97503900156005,
+    -3.9875195007800244
+  ],
+  "all_frames_have_transparent_border": true,
+  "preserves_source_offscreen_motion": false
+}

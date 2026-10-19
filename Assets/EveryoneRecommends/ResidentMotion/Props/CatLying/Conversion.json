@@ -1,0 +1,26 @@
+{
+  "id": "CatLying",
+  "source": "E:\\《大家都推荐》-GameJam\\完整趴卧待机.mp4",
+  "source_sha256": "87c391d2fdc6643482187a4def6e348ebefbfccb57648c58957d8eb7f2e8bf67",
+  "source_unchanged": true,
+  "canvas": [
+    512,
+    320
+  ],
+  "frames": 121,
+  "fps": 24.0,
+  "seconds": 5.041666666666667,
+  "source_union": [
+    41,
+    192,
+    678,
+    526
+  ],
+  "fixed_scale": 0.7660910518053375,
+  "offset": [
+    -19.409733124018828,
+    -94.96389324960757
+  ],
+  "all_frames_have_transparent_border": true,
+  "preserves_source_offscreen_motion": false
+}

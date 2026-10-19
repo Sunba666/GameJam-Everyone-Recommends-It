@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7275d946c86f3f479cf28f7e894b9df, type: 3}
+  m_Name: Floor2
+  m_EditorClassIdentifier: 
+  floor: 2
+  day: {fileID: 21300000, guid: de6e572538afb2a4393f136d8c229808, type: 3}
+  night: {fileID: 21300000, guid: 4c5d84837bee3ba4daaa7f3cb5a5c751, type: 3}
+  residents:
+  - {x: 0.23, y: 0.42}
+  - {x: 0.5, y: 0.42}
+  - {x: 0.77, y: 0.42}
+  anchors:
+  - residentInFloor: 0
+    kind: 0
+    normalizedPosition: {x: 0.23, y: 0.42}
+    normalizedSize: {x: 0.16, y: 0.25}
+  - residentInFloor: 0
+    kind: 1
+    normalizedPosition: {x: 0.105, y: 0.34}
+    normalizedSize: {x: 0.055, y: 0.035}
+  - residentInFloor: 0
+    kind: 2
+    normalizedPosition: {x: 0.23, y: 0.22}
+    normalizedSize: {x: 0.12, y: 0.075}
+  - residentInFloor: 0
+    kind: 3
+    normalizedPosition: {x: 0.23, y: 0.72}
+    normalizedSize: {x: 0.12, y: 0.14}
+  - residentInFloor: 1
+    kind: 0
+    normalizedPosition: {x: 0.5, y: 0.42}
+    normalizedSize: {x: 0.16, y: 0.25}
+  - residentInFloor: 1
+    kind: 1
+    normalizedPosition: {x: 0.58, y: 0.34}
+    normalizedSize: {x: 0.055, y: 0.035}
+  - residentInFloor: 1
+    kind: 2
+    normalizedPosition: {x: 0.5, y: 0.22}
+    normalizedSize: {x: 0.12, y: 0.075}
+  - residentInFloor: 1
+    kind: 3
+    normalizedPosition: {x: 0.5, y: 0.72}
+    normalizedSize: {x: 0.12, y: 0.14}
+  - residentInFloor: 2
+    kind: 0
+    normalizedPosition: {x: 0.77, y: 0.42}
+    normalizedSize: {x: 0.16, y: 0.25}
+  - residentInFloor: 2
+    kind: 1
+    normalizedPosition: {x: 0.89, y: 0.34}
+    normalizedSize: {x: 0.055, y: 0.035}
+  - residentInFloor: 2
+    kind: 2
+    normalizedPosition: {x: 0.77, y: 0.22}
+    normalizedSize: {x: 0.12, y: 0.075}
+  - residentInFloor: 2
+    kind: 3
+    normalizedPosition: {x: 0.77, y: 0.72}
+    normalizedSize: {x: 0.12, y: 0.14}
+  - residentInFloor: 0
+    kind: 4
+    normalizedPosition: {x: 0.055, y: 0.64}
+    normalizedSize: {x: 0.065, y: 0.25}

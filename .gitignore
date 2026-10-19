@@ -8,6 +8,9 @@
 /[Bb]uilds/
 /[Mm]emoryCaptures/
 /[Rr]ecordings/
+/outputs/
+__pycache__/
+*.py[cod]
 *.log
 *.tmp
 
@@ -30,6 +33,8 @@
 
 # Local backups and exported packages
 /Design/Menu*Backup_*/
+/Design/ResidentsStatusBackup_*/
+/Design/DemoBackup_*/
 /Assets/Scenes/Backups/
 /Assets/Scenes/Backups.meta
 *.unitypackage
